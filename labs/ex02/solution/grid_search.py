@@ -22,7 +22,7 @@ def get_best_parameters(w0, w1, losses):
 
 
 ### SOLUTION
-def grid_search(y, tx, w0, w1):
+def grid_searchh(y, tx, w0, w1):
     """Algorithm for grid search."""
     losses = np.zeros((len(w0), len(w1)))
     # compute loss for each combination of w0 and w1.
