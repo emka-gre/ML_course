@@ -27,4 +27,7 @@ def ridge_regression(y, tx, lambda_):
     # COPY YOUR CODE FROM EX03 HERE
     # ridge regression: TODO
     # ***************************************************
-    raise NotImplementedError
+    N, D = tx.shape
+    A = tx.T @ tx + 2 * N * lambda_ * np.eye(D)
+    b = tx.T @ y
+    return np.linalg.solve(A, b)
