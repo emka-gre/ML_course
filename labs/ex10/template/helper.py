@@ -48,3 +48,11 @@ def build_distance_matrix(data, mu):
     ####################################
     ### ___ Enter your code here ___ ###
     ####################################
+    matrix = []
+    for i in range (len(data)):
+        matrix.append([])
+        for j in range (len(mu)):
+            distance_point = np.linalg.norm(data[i] - mu[j]) ** 2   # added ** 2
+            matrix[i].append(distance_point)
+    return np.array(matrix)                                         # was: return matrix
+
